@@ -4,7 +4,26 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="content-language" content="pt-br" />
       <title>Layout</title>
-	  <link rel="stylesheet" href="/morzes/web/test.css" />
+      <link rel="stylesheet" href="test.css" />
+<!-- 	  <link rel="stylesheet" href="/morzes/web/test.css" /> -->
+
+		<script src="http://code.jquery.com/jquery-latest.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			  var nav = $("#header");
+			  var view = $("#view");
+			  
+		         $(window).scroll(function () {
+		              if ($(this).scrollTop() > 160) {
+		                  nav.addClass("fixed");
+		                  view.addClass("spaced");
+		              } else {
+		                  nav.removeClass("fixed");
+		                  view.removeClass("spaced");
+		              }
+		        });
+			 });
+		</script>
    </head>
  
    <body>
